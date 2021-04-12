@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Chennai Super Kings{% endblock %}
+{% block content %}
+    <h1> CSK SQUAD FOR IPL 2021 </h1>
+        <ul>
+        {%for i in range(0, len)%}
+            <li><a href = {{ url_for('show_user_profile' ,playername= players_list[i]) }}>{{players_list[i]}}</a></li>
+        {%endfor%}
+        </ul>
+{% endblock %}
