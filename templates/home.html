@@ -1,10 +1,37 @@
 {% extends "base.html" %}
 {% block title %}Chennai Super Kings{% endblock %}
 {% block content %}
-    <h1> CSK SQUAD FOR IPL 2021 </h1>
-        <ul>
-        {%for i in range(0, len)%}
-            <li><a href = {{ url_for('show_user_profile' ,playername= players_list[i]) }}>{{players_list[i]}}</a></li>
-        {%endfor%}
-        </ul>
+    <h1 class="main-title">CSK SQUAD FOR IPL 2021</h1>
+    <div class="top-card">
+        <a class = "container" href = {{ url_for('show_user_profile' ,playername= players_list[0]) }}>{{players_list[0]}},                   Captain</a>
+    </div>
+    <table class="player-table">
+    {%for i in range(1, len,4)%}
+        
+        <tr>
+            <td>
+                <div class="card">
+                    <a class = "container" href = {{ url_for('show_user_profile' ,playername= players_list[i]) }}>{{players_list[i]}}</a>
+                </div>
+            </td>
+            <td>
+                <div class="card">
+                    <a class = "container" href = {{ url_for('show_user_profile' ,playername= players_list[i+1]) }}>{{players_list[i+1]}}</a>
+                </div>
+            </td>
+            <td>
+                <div class="card">
+                    <a class = "container" href = {{ url_for('show_user_profile' ,playername= players_list[i+2]) }}>{{players_list[i+2]}}</a>
+                </div>
+            </td>
+
+            <td>
+                <div class="card">
+                    <a class = "container" href = {{ url_for('show_user_profile' ,playername= players_list[i+3]) }}>{{players_list[i+3]}}</a>
+                </div>
+            </td>
+        </tr>
+            
+    {%endfor%}
+    </table>
 {% endblock %}

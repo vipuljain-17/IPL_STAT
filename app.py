@@ -10,8 +10,13 @@ all_players_name = ['MS Dhoni', 'Ambati Rayudu', 'KM Asif', 'Dwayne Bravo', 'Dee
     'Suresh Raina', 'Moeen Ali', 'Krishnappa Gowtham', 'Cheteshwar Pujara', 'Harishankar Reddy', 'C Hari Nishaanth', 'Bhagath Varma', 'Jason Behrendroff']
 
 def return_stats(selected_name):
-	values = data.loc[data.Player_Name == selected_name].values.ravel().tolist()
+	values = data.loc[data.Player_Name == selected_name].fillna("-").values.ravel().tolist()
 	d = dict(zip(cols, values))
+	if d['IPL_Debut'] != "-":
+		d['IPL_Debut'] = int(d['IPL_Debut'])
+	if d['Matches_played'] != "-":
+		d['Matches_played'] = int(d['Matches_played'])
+	
 	return d
 
 @app.route('/')
@@ -20,7 +25,7 @@ def hello_world():
 
 @app.route('/players/<playername>')
 def show_user_profile(playername):
-	return render_template('profile.html', player_name = playername)
+	return render_template('profile.html', player_name = playername, stats=return_stats(playername))
 
 if __name__ == '__main__':
 	app.run(debug=True)

@@ -6,6 +6,12 @@
         <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename = '/images/favcion.ico')}}" />
     </head>
     <body>
+        <div class="topnav">
+            <a href={{ url_for('hello_world')}}>Chennai Super Kings</a>
+            <div class="topnav-right">
+                <a href="#poll">Poll</a>
+            </div>
+        </div>
         <div id="content">{% block content %}{% endblock %}</div>
     </body>
 </html>

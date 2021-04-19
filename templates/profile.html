@@ -1,5 +1,65 @@
 {% extends "base.html" %}
 {% block title %}{{ player_name }}{% endblock %}
 {% block content %}
-    <h1>{{ player_name }}</h1>
+    <div class="main-profile">
+        <div class="top-profile">
+            <h1>{{ player_name }}</h1>
+        </div>
+
+        <div class="bottom-profile">
+            <div class="left-profile">
+                <h2>Personal Information</h2>
+                <ul>
+                    <li>IPL Debut: {{stats['IPL_Debut']}}</li>
+                    <li>Role: {{stats['Role']}}</li>
+                    <li>Batting Style: {{stats['Batting_Style']}}</li>
+                    <li>Bowling Style: {{stats['Bowling_Style']}}</li>
+                    <li>Nationality: {{stats['Indian/Overseas']}}</li>
+                    <li>Matches Played: {{stats['Matches_played']}}</li>
+                </ul>
+            </div>
+            <div class="right-profile">
+                <div class="batting-table">
+                    <h2>Batting Career Summary</h2>
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>Runs</th>
+                            <th>Strike Rate</th>
+                            <th>Average</th>
+                            <th>50</th>
+                            <th>100</th>
+                        </tr>
+                        <tr>
+                            <th>IPL</th>
+                            <td>{{stats['Runs_Scored']}}</td>
+                            <td>{{stats['Batting_SR']}}</td>
+                            <td>{{stats['Batting_Avg']}}</td>
+                            <td>{{stats['50s']}}</td>
+                            <td>{{stats['100s']}}</td>
+                        </tr>
+                    </table>
+                </div>    
+                <div class="bowling-table">
+                    <h2>Bowling Career Summary</h2>
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>Wickets Taken</th>
+                            <th>Strike Rate</th>
+                            <th>Average</th>
+                            <th>Economy</th>
+                        </tr>
+                        <tr>
+                            <th>IPL</th>
+                            <td>{{stats['Wickets_Taken']}}</td>
+                            <td>{{stats['Bowling_SR']}}</td>
+                            <td>{{stats['Bowling_Avg']}}</td>
+                            <td>{{stats['Economy']}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
