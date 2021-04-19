@@ -16,6 +16,15 @@ def return_stats(selected_name):
 		d['IPL_Debut'] = int(d['IPL_Debut'])
 	if d['Matches_played'] != "-":
 		d['Matches_played'] = int(d['Matches_played'])
+	if d['Runs_Scored'] != "-":
+		d['Runs_Scored'] = int(d['Runs_Scored'])
+	if d['50s'] != "-":
+		d['50s'] = int(d['50s'])
+	if d['100s'] != "-":
+		d['100s'] = int(d['100s'])
+	if d['Wickets_Taken'] != "-":
+		d['Wickets_Taken'] = int(d['Wickets_Taken'])
+
 	
 	return d
 
