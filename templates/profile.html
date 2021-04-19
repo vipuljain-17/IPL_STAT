@@ -3,7 +3,11 @@
 {% block content %}
     <div class="main-profile">
         <div class="top-profile">
-            <h1>{{ player_name }}</h1>
+            {% if player_name == "MS Dhoni" %}
+                <h1>{{ player_name }}, Captain</h1>
+            {% else %}
+                <h1>{{ player_name }}</h1>
+            {% endif %}
         </div>
 
         <div class="bottom-profile">
