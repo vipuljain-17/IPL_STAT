@@ -170,5 +170,10 @@ h1{
 }
 
 .result{
-  background-color: wheat;
+  /*background-color: wheat;*/
+  margin: auto;
+  text-align: center;
+}
+chart{
+  margin: 0 auto;
 }

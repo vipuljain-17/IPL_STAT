@@ -4,6 +4,7 @@
         <title>{% block title %}{% endblock %}</title>
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style.css') }}">
         <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename = '/images/favcion.ico')}}" />
+        {% block script_js %}{% endblock %}
     </head>
     <body>
         <div class="topnav">
