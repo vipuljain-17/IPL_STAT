@@ -152,6 +152,7 @@ h1{
 #submit-button:hover{
   background-color: wheat;
   color: #2361fd;
+  font-size: 125%;
 }
 
 .team-form input[type=text],select{
