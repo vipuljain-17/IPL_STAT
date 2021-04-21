@@ -1,7 +1,6 @@
-<!DOCTYPE html>
-<html lang = "en">
-   <head></head>
-   <body>
+{% extends "base.html" %}
+{% block title %}Overall Results{% endblock %}
+{% block content %}
       <h3>
          <a href = "{{ url_for('show_all') }}">IPL POLL 2021</a>
       </h3>
@@ -11,14 +10,11 @@
          {{ message }}
       {%- endfor %}
 		
-      
-      
       <table>
          <thead>
             <tr>
                <th>Favorite Player</th>
                <th>Predicted team for cup</th>
-               
             </tr>
          </thead>
 
@@ -31,5 +27,4 @@
             {% endfor %}
          </tbody>
       </table>
-   </body>
-</html>
+{% endblock %}

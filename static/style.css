@@ -51,6 +51,7 @@ h1{
   /* On mouse-over, add a deeper shadow */
   .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    font-size: 125%;
   }
   
   .player-table{
@@ -81,6 +82,7 @@ h1{
   }
   .top-card:hover{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    font-size: 150%;
   }
 
   .top-card a:hover{
@@ -147,11 +149,13 @@ h1{
   transition-duration: 0.4s;
   /*box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);*/
   cursor: pointer;
+  font-size: large;
 }
 
 #submit-button:hover{
   background-color: wheat;
   color: #2361fd;
+  font-size: 175%;
 }
 
 .team-form input[type=text],select{
@@ -162,6 +166,7 @@ h1{
   border: 1px solid black;
   border-radius: 4px;
   box-sizing: border-box;
+  font-size: large;
 }
 
 .team-form input[type=submit]{
