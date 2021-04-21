@@ -9,7 +9,7 @@
         <div class="topnav">
             <a href={{ url_for('hello_world')}}>Chennai Super Kings</a>
             <div class="topnav-right">
-                <a href="#poll">Poll</a>
+                <a href={{ url_for('create')}}>Poll</a>
             </div>
         </div>
         <div id="content">{% block content %}{% endblock %}</div>

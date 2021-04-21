@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Vote For Your Fav Team{% endblock %}
+{% block content %}
+<div class="team-form">
+  <form action='' method = "POST">
+    <!--
+    <p>Team Winning IPL 2021 <input type = "text" name = "predicted_team_for_cup" /></p>
+    -->
+
+    <label for="teams">Team Winning IPL 2021:</label>
+    <select id="teams" name="predicted_team_for_cup">
+      <option value="CSK">Chennai Super Kings (CSK)</option>
+      <option value="MI">Mumbai Indians (MI)</option>
+      <option value="RCB">Royal Challengers Bangalore (RCB)</option>
+      <option value="DC">Delhi Capitals (DC)</option>
+      <option value="PBKS">Punjab Kings (PBKS)</option>
+      <option value="RR">Rajasthan Royals (RR)</option>
+      <option value="KKR">Kolkata Knight Riders (KKR)</option>
+      <option value="SRH">Sunrisers Hyderabad (SRH)</option>
+    </select>
+
+    <label for="fav-player">Favourite Player</label>
+    <input type = "text" name = "fav_player_name" id="fav-player"/>
+    <input type = "submit" value = "Submit" id = "submit-button"/>
+  </form>
+</div>
+{% endblock %}
